@@ -1,4 +1,4 @@
-package algorithmscom.jj.enterprise.ga;
+package com.jj.enterprise.ga;
 
 /**
  * Simple implementation of the binary search algorithm

@@ -1,4 +1,4 @@
-package algorithmscom.jj.enterprise.ga;
+package com.jj.enterprise.ga;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -7,6 +7,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.jj.enterprise.ga.BinarySearch;
 
 /**
  * Test class for the {@link BinarySearch} class

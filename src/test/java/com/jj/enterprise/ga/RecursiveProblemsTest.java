@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -50,5 +51,32 @@ public class RecursiveProblemsTest {
 		list.add(6);
 		
 		assertThat(RecursiveProblems.getInstance().numberOfItems(list), is(3));
+	}
+	
+	@Test
+	public void givenEmptyList_ThenExceptionThrown() {
+		try {
+			RecursiveProblems.getInstance().maxItemInList(null);
+			Assert.fail("Exception should have been thrown!");
+		}
+		catch (IllegalArgumentException iae) {}
+	}
+	
+	@Test
+	public void givenSingleValueInList_ThenMaxIsItself() {
+		List<Integer> list = new ArrayList<>();
+		list.add(2);
+		
+		assertThat(RecursiveProblems.getInstance().maxItemInList(list), is(2));
+	}
+	
+	@Test
+	public void givenValidList_ThenMaxIsDetermined() {
+		List<Integer> list = new ArrayList<>();
+		list.add(2);
+		list.add(44);
+		list.add(6);
+		
+		assertThat(RecursiveProblems.getInstance().maxItemInList(list), is(44));
 	}
 }

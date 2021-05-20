@@ -33,4 +33,21 @@ public class RecursiveProblems {
 		list.remove(0);
 		return 1 + numberOfItems(list);
 	}
+	
+	/**
+	 * Method returns the maximum value in the array
+	 */
+	public int maxItemInList(List<Integer> list) {
+		if (CollectionUtils.isEmpty(list)) {
+			throw new IllegalArgumentException("Invalid argument as the input list is required");
+		}
+		
+		if (list.size() == 1) {
+			return list.get(0);
+		}
+		
+		int firstValue = list.remove(0);
+		int sumSub = maxItemInList(list);
+		return (firstValue > sumSub) ? firstValue : sumSub;
+	}
 }

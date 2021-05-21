@@ -33,7 +33,7 @@ public class QuickSortTest {
 	}
 	
 	@Test
-	public void givenAnArrayWithTwoElements_ThenItIsAlreadySorted() {
+	public void givenAnArrayWithTwoElements_ThenItIsSorted() {
 		// Setup the test input(s) / condition(s)
 		List<Integer> unsorted = new ArrayList<>();
 		unsorted.add(2);

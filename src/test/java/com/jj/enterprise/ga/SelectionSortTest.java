@@ -1,4 +1,4 @@
-package algorithmscom.jj.enterprise.ga;
+package com.jj.enterprise.ga;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
